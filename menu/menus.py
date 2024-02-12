@@ -1,6 +1,7 @@
 import os
 from mas.funciones import *
 
+
 def menu_roles():
     clear_screen()
     print("----------Menú De Roles----------")
