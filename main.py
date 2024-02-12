@@ -8,12 +8,28 @@ def coordinador():
     opc=menu_coordinador()
     if opc==1:
         registrar_camper()
-        print("Vamo mesi")
+
+
+def salir_programa():
+    clear_screen()
+    print("----------Cerrando Sesión----------")
+    print("")
+    print("")
+    print("Gracias por usar nuestro programa :3")
+    print("")
+    print("")
+    print("------------------------------------")
 
 
 
-
-
+def horario_trainer():
+    clear_screen()
+    print("----------Menu Trainer----------")
+    print("")
+    print("Aqui se mostraran todos los horarios dependiendo del trainer")
+    print("")
+    print("El usuario podra ingresar su nombre y se vera su horario")
+    print("O estoy pensando si pedirle su ID xd")
 
 
 while True:
@@ -22,8 +38,7 @@ while True:
     if opc==1:
         coordinador()
     if opc==2:
-        print("Aqui deben estar los horarios del trainer xd")
-        break
+        horario_trainer()
     if opc==3:
-        print("Gracias por usar nuestro programa :3")
+        salir_programa()
         break
