@@ -3,30 +3,28 @@ from datas.funciones_data import *
 
 #Aqui van las funciones de los campers
 
-def registrar_camper():
+def registrar_camper(datos):
     clear_screen()
-    print("Sistema de registro campers")
-    
-    nombre=input("Ingresa el nombre del camper: ")
-    apellido=input("Ingrese el apellido del camper: ")
-    id=int(input("Ingrese el documento del camper: "))
-    direccion=input("Ingrese la direccion del camper: ")
-    acudiente = input("Ingrese el acudiente del camper: ")
-    tlf_celular = input("Ingrese el numero celular del camper: ")
-    tlf_fijo = input("Ingrese el numero fijo del camper: ")  
+    print("==== Crear Camper ====")
+    nombre = input("Nombre: ")
+    apellido = input("Apellido: ")
+    id_camper = input("ID: ")
+    direccion = input("Dirección: ")
+    acudiente = input("Acudiente: ")
+    telefono_celular = input("Teléfono Celular: ")
+    telefono_fijo = input("Teléfono Fijo: ")
 
-    camper={
-        'nombre': nombre,
-        'apellido': apellido,
-        'identificacion': id,
-        'direccion': direccion,
-        'acudiente': acudiente,
-        'telefono_celular': tlf_celular,
-        'telefono_fijo': tlf_fijo,
-        'estado': "Inscrito"
+    nuevo_camper = {
+        "nombre": nombre,
+        "apellido": apellido,
+        "id": id_camper,
+        "direccion": direccion,
+        "acudiente": acudiente,
+        "telefono_celular": telefono_celular,
+        "telefono_fijo": telefono_fijo
     }
-    
-    lista_campers.append(camper)
-    print("Se ha creado el camper!")
-    json_guardar()
-    return camper
+
+    datos["campers"].append(nuevo_camper)
+    guardar_datos(datos)
+    print("Camper creado exitosamente.")
+    input("Presiona Enter para volver al menú.")
