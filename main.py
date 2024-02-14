@@ -1,7 +1,6 @@
 from menu.menus import *
 from mas.funciones import *
 from mas.mas_camper import *
-from datas.funciones_data import *
 
 def coordinador():
     clear_screen()
@@ -46,18 +45,25 @@ while True:
 
         ops=verify_opc("Digite una opcion: ",1,8)
         if ops==1:
+            clear_screen()
             registrar_camper()
         elif ops==2:
+            clear_screen()
             listar_campers()            
         elif ops == 3:
+            clear_screen()
             modificar_camper()
         elif ops == 4:
+            clear_screen()
             crear_trainer()
         elif ops == 5:
+            clear_screen()
             modificar_trainer()
         elif ops == 6:
+            clear_screen()
             eliminar_camper()
         elif ops == 7:
+            clear_screen()
             eliminar_trainer()
         elif ops == 8:
             break
