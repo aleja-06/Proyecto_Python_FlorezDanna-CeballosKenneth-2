@@ -8,7 +8,6 @@ def guardar_datos(carpeta, archivo, datos):
     with open(os.path.join(carpeta, archivo), 'w') as file:
         json.dump(datos, file, indent=4)  # Puedes ajustar el valor de indent según tus preferencias
 
-
 def cargar_datos(carpeta, archivo):
     ruta = os.path.join(carpeta, archivo)
     if os.path.exists(ruta):
